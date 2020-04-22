@@ -9,6 +9,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "extend": "2.0.0",
+    "pug": "^2.0.4",
     "pure-json-api": "^1.0.9",
     "require-dir": "^0.3.0"
   },

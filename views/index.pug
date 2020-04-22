@@ -1,0 +1,9 @@
+html
+  head
+    title pureJson help page
+  body
+    h1 call using curl
+    p curl 'http:/localhost:1337/test' --header 'Content-Type: application/json' --data '{"action_str": "retrieve", "data_type": "person", "log_list": [ ], "request_map": { }, "trans_map": { } }' -o response.txt"
+    p view the reponse.txt
+    p expected result
+    p {"action_str":"RETRIEVED","data_type":"person","log_list":[],"response_map":{},"trans_map":{}}

@@ -27,7 +27,14 @@ app.get('/helloworld', function (req, res) {
 });
 //render pug template index.pub
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!' })
+  res.render('index')
+});
+//render pug template index.pub
+app.get('/pugTemplate', function (req, res) {
+  res.render('tempatedPage', { title: 'Example template', message: 'This text can change!' })
+});
+app.get('/pugTemplate2', function (req, res) {
+  res.render('tempatedPage', { title: 'AnotherExample template', message: 'See what I mean!' })
 });
 
 

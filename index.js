@@ -12,22 +12,33 @@ exports.ApiResponse = ApiResponse;
 var defaults = {
     handlersDir: "/handlers",
     validateReqFunc: function (req) {
+      //try {
+        console.log("jim",req.body);
+/*        const user = JSON.parse(req);
+        } catch(err) {
+          console.error(err)
+          return false;
+        }*/
         return true;
+
+
     },
     dataType: "data_type",
     actionStr: "action_str",
-    debug: false
+    debug: true
 };
 
 exports.endPoint = function (options) {
+  console.log("endpoint here..")
     options = extend(true, defaults, options);
+    console.log("b4 handlers here..")
     var handlers = requireDir(options.handlersDir);
 
     return function (req, res, next) {
         var apiResponse = new ApiResponse(),
             dataType = options.dataType,
             actionStr = options.actionStr;
-
+              console.log("vester here..")
         var data = req.body || {};
         options.debug && console.log("Request data:", data, "\n");
 

@@ -22,6 +22,24 @@ var options = {
     dataType: undefined,
     actionStr: undefined
 };
+
+var test_options = {
+    debug: true,
+    handlersDir: "./example_handlers",
+    validateReqFunc: function (req) {
+        var data = req.body || {};
+        return (data["action_str"] !== undefined && typeof data["action_str"] === "string")
+            && (data["data_type"] !== undefined && typeof data["data_type"] === "string")
+            && (data["log_list"] !== undefined && typeof data["log_list"] === "object")
+            && (data["request_map"] !== undefined && typeof data["request_map"] === "object")
+            && (data["trans_map"] !== undefined && typeof data["trans_map"] === "object");
+    },
+    dataType: undefined,
+    actionStr: undefined
+};
+
+
+
 app.get('/helloworld', function (req, res) {
   res.send('hello world')
 });
@@ -38,4 +56,5 @@ app.get('/pugTemplate2', function (req, res) {
 });
 
 
-app.post("/test", pureApi.endPoint(options));
+app.post("/test", pureApi.endPoint(test_options));
+app.post("/pureJson", pureApi.endPoint(options));

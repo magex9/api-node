@@ -1,1 +1,1 @@
-{"action_str":"RETRIEVED","data_type":"person","log_list":[],"response_map":{},"trans_map":{}}
+{"action_str":"RETRIEVED","data_type":"orgranization","log_list":[],"response_map":{"page":1,"total":1,"hasNext":false,"hasPrevious":true,"content":[{"@context":"http://magex9.github.io/api/","@type":"OrganizationSummary","@id":"z22F9PnS6C","status":{"@type":"Status","@value":"active","@en":"Active","@fr":"Actif"},"displayName":"Magex"}]},"trans_map":{}}

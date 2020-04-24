@@ -11,6 +11,7 @@
     "extend": "2.0.0",
     "pug": "^2.0.4",
     "pure-json-api": "^1.0.9",
+    "request": "^2.88.2",
     "require-dir": "^0.3.0"
   },
   "author": "jim vester",

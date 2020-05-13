@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "extend": "2.0.0",
+    "extend": "2.0.2",
     "pug": "^2.0.4",
     "pure-json-api": "^1.0.9",
     "request": "^2.88.2",
